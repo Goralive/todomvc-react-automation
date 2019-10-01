@@ -12,7 +12,7 @@ public class ToDoPage {
     private SelenideElement deleteBtn = $(".destroy");
     private SelenideElement hoverToDo = $(".view");
     private SelenideElement todoCount = $(".todo-count strong");
-    //private SelenideElement activeTabBtn = $();
+    private ElementsCollection completedToDos = $$(".completed");
 
     int listItemsBeforeWasChecked;
     int listItemsAfterWasChecked;
@@ -64,9 +64,9 @@ public class ToDoPage {
         return false;
     }
 
-//    public boolean completedAttributeIsPresent(int numberOfClicks) {
-//
-//    }
+    public boolean completedAttributeIsPresent() {
+        return listItemsAfterWasChecked == completedToDos.size();
+    }
 
     public boolean activeTabPresentsOfElements() {
         return true;

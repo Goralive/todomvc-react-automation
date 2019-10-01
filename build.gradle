@@ -16,6 +16,8 @@ dependencies {
     testImplementation ("io.github.bonigarcia:webdrivermanager:3.6.2")
     testImplementation 'com.codeborne:selenide:5.2.8'
     testImplementation 'org.testng:testng:6.14.3'
+}
 
-
+test {
+    useTestNG()
 }
