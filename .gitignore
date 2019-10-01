@@ -5,3 +5,6 @@
 build
 out
 target
+node_modules
+.cache
+dist
